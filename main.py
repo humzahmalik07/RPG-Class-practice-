@@ -25,12 +25,25 @@ def second():
         Tile_2.location()
         direction = input("Where do you want to go: ")
         if direction == "backward":
-            start()
+            quit()
             
 
 a1 = start()
 a2 = second()
 
+gamemap = {a1, a2}
 
-gamemap = {a1, a2,
-          } 
+character = {"Batman" : {"description":
+                        "My real name is Bruce Wayne"}}
+
+def character_inventory(player, character):
+    for item in character[player]:
+        description = character[player]["description"]
+        print(f"{player}'s {item} - {description}")
+
+character_choice = input("Enter Batman: ")
+while True:
+  if character_choice == "Batman":
+     character_inventory("Batman", character)
+     start()
+     second()
