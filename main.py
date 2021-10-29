@@ -19,7 +19,7 @@ def start():
 
 
 def second():
-    class firstTile(MapTile):
+    class secondTile(MapTile):
         print("You are at the second tile. enter direction to go")
         Tile_2 = MapTile(0, 2)
         Tile_2.location()
@@ -30,8 +30,13 @@ def second():
 gamemap = {start, second}
 
 
-character = {"Batman" : {"description":
+character = {"Batman" : 
+                        {"description":
                         "My real name is Bruce Wayne"}}
+
+character_2 = {"Green Lantern" :
+                                  {"description":
+                                  "My name is Hal Jordan"}}       
 
 def character_inventory(player, character):
     for item in character[player]:
@@ -39,9 +44,24 @@ def character_inventory(player, character):
         print(f"{player}'s {item} - {description}")
 
 
-character_choice = input("Enter Batman: ")
+character_choice = input("Enter Batman OR Green Lantern: ")
 while True:
-  if character_choice == "Batman":
-     character_inventory("Batman", character)
-     start()
-     second()
+    if character_choice == "Batman":
+        character_inventory("Batman", character)
+        start()
+        second()
+
+location = {
+     ["Blank", "Blank", "Blank", "Level 10" , "Blank"   ],
+     ["Blank", "Blank", "Blank", "Level 9", "Blank"],
+     ["Blank", "Blank", "Level 7", "Level 8", "Blank"],
+     ["Blank", "Blank", "Level 6", "Blank", "Blank"],
+     ["Blank", "Level 4", "Level 5", "Blank", "Blank"],
+     ["Blank", "Level 3", "Blank", "Blank", "Blank"],
+     ["Blank", "Level 2", "Level 1", "Blank", "Blank"],
+     }
+
+current_location = location[]
+    
+
+        
