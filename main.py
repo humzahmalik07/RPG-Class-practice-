@@ -31,8 +31,6 @@ def second():
 a1 = start()
 a2 = second()
 
-a1
-a2
 
 gamemap = {a1, a2,
           } 
