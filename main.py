@@ -7,6 +7,14 @@ class MapTile:
     def location(self):
         print("your current location is ", self.x, self.y)
 
+    def pick_coin(self):
+          coins = []
+          print("You have picked up a coin")
+          coins.append("1")
+          print(coins)
+          
+
+
 
 def start():
     class firstTile(MapTile):
@@ -15,6 +23,7 @@ def start():
         Tile.location()
         direction = input("Where do you want to go: ")
         if direction == "right":
+            Tile.pick_coin()
             second()
 
 
@@ -25,6 +34,7 @@ def second():
         Tile_2.location()
         direction = input("Where do you want to go: ")
         if direction == "left":
+            Tile_2.pick_coin()
             start()
 
 gamemap = {start, second}
@@ -59,9 +69,7 @@ location = {
      ["Blank", "Level 4", "Level 5", "Blank", "Blank"],
      ["Blank", "Level 3", "Blank", "Blank", "Blank"],
      ["Blank", "Level 2", "Level 1", "Blank", "Blank"],
-     }
-
-current_location = location[]
+}
     
 
         
